@@ -13,8 +13,8 @@ sample-repo:
   service_id: githubpublic
   parameters:
     repo_name: "{{name}}"
-    repo_url: https://github.com/IBMCloudDevOps/bluemix-kubernetes-sample.git
-    type: fork
+    repo_url: https://github.com/jdillick/bluemix-kubernetes-sample.git
+    type: clone
     has_issues: false
 
 # Pipelines
@@ -42,3 +42,5 @@ deploy:
   service-category: pipeline
   parameters:
     prod-app-name: "{{sample-repo.parameters.repo_name}}"
+    prod-organization: "dillickjohn@us.ibm.com"
+    prod-space: "dev"
