@@ -27,10 +27,10 @@ sample-build:
      content: $file(pipeline.yml)
      env:
       SAMPLE_REPO: "sample-repo"
-      CF_APP_NAME: "{{deploy.parameters.prod-app-name}}"
-      PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
-      PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
-      PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
+      CF_APP_NAME: "{{deploy.parameters.app-name}}"
+      SPACE_NAME: "{{deploy.parameters.space}}"
+      ORG_NAME: "{{deploy.parameters.organization}}"
+      REGION_ID: "{{deploy.parameters.region}}"
      execute: true
     services: ["sample-repo"]
   hidden: [form, description]
@@ -41,6 +41,4 @@ deploy:
     $ref: deploy.json
   service-category: pipeline
   parameters:
-    prod-app-name: "{{sample-repo.parameters.repo_name}}"
-    prod-organization: "dillickjohn@us.ibm.com"
-    prod-space: "dev"
+    app-name: "{{sample-repo.parameters.repo_name}}"

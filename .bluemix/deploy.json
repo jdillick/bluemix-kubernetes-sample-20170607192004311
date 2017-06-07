@@ -5,24 +5,24 @@
     "longDescription": "The Delivery Pipeline automates continuous deployment.",
     "type": "object",
     "properties": {
-        "prod-region": {
+        "region": {
             "description": "The bluemix region",
             "type": "string"
         },
-        "prod-organization": {
+        "organization": {
             "description": "The bluemix org",
             "type": "string"
         },
-       "prod-space": {
+       "space": {
             "description": "The bluemix space",
             "type": "string"
         },
-       "prod-app-name": {
+       "app-name": {
             "description": "The name of your Hello World app",
             "type": "string"
         }
     },
-    "required": ["prod-region", "prod-organization", "prod-space", "prod-app-name"],
+    "required": ["region", "organization", "space", "app-name"],
     "form": [
        {
           "type": "validator",
@@ -32,7 +32,7 @@
           "type": "text",
           "readonly": false,
           "title": "App name",
-          "key": "prod-app-name"
+          "key": "app-name"
         },
         {
             "type": "table",
@@ -61,15 +61,15 @@
                 },
                 {
                   "type": "select",
-                  "key": "prod-region"
+                  "key": "region"
                 },
                 {
                   "type": "select",
-                  "key": "prod-organization"
+                  "key": "organization"
                 },
                 {
                   "type": "select",
-                  "key": "prod-space",
+                  "key": "space",
                   "readonly": false
                 }
             ]
