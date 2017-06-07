@@ -32,7 +32,7 @@ stages:
     type: secure
   - name: CLUSTER_NAME
     type: text
-    value: Kate
+    value: mycluster
   jobs:
   - name: Deploy
     type: deployer
